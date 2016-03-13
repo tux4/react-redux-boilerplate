@@ -7,7 +7,9 @@
     "start": "node ./dev_config/webpack_server.js",
     "test": "./node_modules/.bin/mocha --recursive --compilers js:babel-register",
     "test:watch": "npm test -- --watch",
-    "webpack:build": "./node_modules/.bin/webpack --config dev_config/webpack.config.js"
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config dev_config/webpack.config.build.js",
+    "build:var": "NODE_ENV=production ./node_modules/.bin/webpack --config dev_config/webpack.config.var.js",
+    "build:commonjs": "NODE_ENV=production ./node_modules/.bin/webpack --config dev_config/webpack.config.common.js"
   },
   "author": "Prasanna Suman",
   "license": "GPL-3.0",
